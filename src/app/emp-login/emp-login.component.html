@@ -1,0 +1,32 @@
+
+<div style="background-image:url() ;">
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                <div class="row g-3">
+                    <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
+                        <h1 style="color:rgb(250, 138, 18)">Employee Login</h1>
+                    </div>
+                    <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                        <label style="font-size:larger" for="" class="form-label"style="color: #977760;">Email</label>
+                        <input name="email" [(ngModel)]="email" type="text" class="form-control">
+                    </div>
+                    <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                        <label style="font-size:larger" for="" class="form-label"style="color: #977760;">Password</label>
+                        <input name="password" [(ngModel)]="password" type="password" id="" class="form-control">
+                    </div>
+                    <div class="d-grid gap-2 col-6 mx-auto">
+                        <button (click)="empLogin()" class="btn btn-primary" type="button">Log in</button>
+                      </div>
+                      <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
+                        <a class="" routerLink="/">Admin login</a>
+                    </div>
+                    <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
+                        <a class="" routerLink="/emplogin">Security login</a>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    </div>
+    
