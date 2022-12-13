@@ -8,6 +8,8 @@ import { Route, RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { EmpLoginComponent } from './emp-login/emp-login.component';
 import { SecurityLoginComponent } from './security-login/security-login.component';
+import { AddEmpComponent } from './add-emp/add-emp.component';
+import { AddSecurityComponent } from './add-security/add-security.component';
 
 const myRoute:Routes=[
   {
@@ -21,6 +23,14 @@ const myRoute:Routes=[
   {
     path:"securitylogin",
     component:SecurityLoginComponent
+  },
+  {
+    path:"addemp",
+    component:AddEmpComponent
+  },
+  {
+    path:"addsecurity",
+    component:AddSecurityComponent
   }
 ]
 
@@ -29,7 +39,9 @@ const myRoute:Routes=[
     AppComponent,
     AdminLoginComponent,
     EmpLoginComponent,
-    SecurityLoginComponent
+    SecurityLoginComponent,
+    AddEmpComponent,
+    AddSecurityComponent
   ],
   imports: [
     BrowserModule,
