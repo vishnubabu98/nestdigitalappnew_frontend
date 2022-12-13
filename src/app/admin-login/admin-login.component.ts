@@ -23,7 +23,7 @@ export class AdminLoginComponent {
 
     if (this.username == "admin" && this.password == "12345") 
     {
-       this.route.navigate(['/bookentry'])
+       this.route.navigate(['/addemp'])
     } else 
     {
       alert("invalid Credential")
