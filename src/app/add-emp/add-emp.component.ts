@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-add-emp',
@@ -14,6 +15,9 @@ export class AddEmpComponent {
   mobno=""
   username=""
   password=""
+  constructor(private api:ApiService){
+    
+  }
 
   readValues=()=>{
     let data:any={
@@ -26,6 +30,12 @@ export class AddEmpComponent {
       "password":this.password
     }
     console.log(data)
+    this.api.addEmployee(data).subscribe(
+      (response:any)=>{
+        console.log(response)
+      
+      }
+    )
   }
 
 }

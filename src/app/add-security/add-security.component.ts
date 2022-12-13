@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-add-security',
@@ -13,6 +14,9 @@ export class AddSecurityComponent {
   mobileno=""
   username=""
   password=""
+  constructor(private api:ApiService){
+    
+  }
 
     readValues=()=>{
       let data:any={
@@ -25,6 +29,12 @@ export class AddSecurityComponent {
 
       }
       console.log(data)
+      this.api.addSecurity(data).subscribe(
+        (response:any)=>{
+          console.log(response)
+        
+        }
+      )
       }
 }
 
