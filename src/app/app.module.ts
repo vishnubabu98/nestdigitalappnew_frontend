@@ -17,6 +17,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { SearchEmpComponent } from './search-emp/search-emp.component';
 import { SearchSecurityComponent } from './search-security/search-security.component';
 import { UpdateEmpComponent } from './update-emp/update-emp.component';
+import { UpdateSecurityComponent } from './update-security/update-security.component';
+import { ViewuserprofileComponent } from './viewuserprofile/viewuserprofile.component';
+import { LeaveApplicationComponent } from './leave-application/leave-application.component';
+import { EmpNavbarComponent } from './emp-navbar/emp-navbar.component';
+import { LeaveStatusComponent } from './leave-status/leave-status.component';
 
 const myRoute:Routes=[
   {
@@ -54,7 +59,29 @@ const myRoute:Routes=[
   {
     path:"searchsecurity",
     component:SearchSecurityComponent
+  },
+  {
+    path:"updateemp",
+    component:UpdateEmpComponent
+  },
+  {
+    path:"updatesecurity",
+    component:UpdateSecurityComponent
+  },
+  {
+    path:"empprofile",
+    component:ViewuserprofileComponent
+  },
+  {
+    path:"leaveapply",
+    component:LeaveApplicationComponent
+  },
+  {
+    path:"leavestatus",
+    component:LeaveStatusComponent
   }
+  
+  
   
 ]
 
@@ -71,7 +98,12 @@ const myRoute:Routes=[
     ViewSecurityComponent,
     SearchEmpComponent,
     SearchSecurityComponent,
-    UpdateEmpComponent
+    UpdateEmpComponent,
+    UpdateSecurityComponent,
+    ViewuserprofileComponent,
+    LeaveApplicationComponent,
+    EmpNavbarComponent,
+    LeaveStatusComponent
   ],
   imports: [
     BrowserModule,

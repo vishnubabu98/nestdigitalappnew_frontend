@@ -32,4 +32,22 @@ export class ApiService {
   deleteEmployee=(dataToSend:any)=>{
     return this.http.post("http://localhost:8080/deleteemp",dataToSend)
   }
+  updateEmployee=(dataToSend:any)=>{
+    return this.http.post("http://localhost:8080/updateemp",dataToSend)
+  }
+  emplogin=(dataToSend:any)=>{
+    return this.http.post("http://localhost:8080/employeeauth",dataToSend)
+  }
+  empProfileData=(dataToSend:any)=>{
+    return this.http.post("http://localhost:8080/empprofile",dataToSend)
+  }
+  leaveApplication=(dataToSend:any)=>{
+    return this.http.post("http://localhost:8080/leavapplication",dataToSend)
+  }
+  leaveStatus=(dataToSend:any)=>{
+    return this.http.post("http://localhost:8080/empleavestatus",dataToSend)
+  }
+
+
+
 }
