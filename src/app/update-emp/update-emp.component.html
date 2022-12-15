@@ -1,1 +1,70 @@
+<app-navbar></app-navbar>
 
+<div class="container mt-4">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="row g-3 ">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
+                    <h1 style="color:brown">Update Employee</h1>
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <label for="" class="form-label">Employee code</label>
+                    <input name="empcode" [(ngModel)]="empcode" type="text" class="form-control">
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <button (click)="search()" class="btn btn-success">Search</button>
+                </div>
+            </div>
+
+            <div class="row g-3 mt-4 ">
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6" *ngFor="let j of empdetails">
+                    <div class="card" style="width: 18rem;">
+                        <img src="https://media.istockphoto.com/id/1300845620/vector/user-icon-flat-isolated-on-white-background-user-symbol-vector-illustration.jpg?s=612x612&w=0&k=20&c=yBeyba0hUkh14_jgv1OKqIH0CCSWU_4ckRkAoy2p73o=" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Employee Name : {{j.empname}} </h5>
+                          <p class="card-text">Mobile Number : {{j.mobno}}</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item">Address : {{j.address}}</li>
+                          
+                          <li class="list-group-item">Email :{{j.email}}</li>
+                        </ul>
+                      
+                      </div>
+
+                </div>
+
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6" *ngFor="let j of empdetails">
+                    <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                        <h2 style="
+                        color: olive;
+                    ">Updated Here</h2>
+                        <label for="" class="form-label">Employee name</label>
+                        <input name="empname"  [(ngModel)]="empname" type="text" class="form-control">
+                    </div>
+                    <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                        <label for="" class="form-label">address</label>
+                        <input name="address"  [(ngModel)]="address" type="text" class="form-control">
+                    </div>
+                    <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                        <label for="" class="form-label">Email</label>
+                        <input name="email"  [(ngModel)]="email" type="text" class="form-control">
+                    </div>
+                    <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                        <label for="" class="form-label"> Mobile Number</label>
+                        <input name="mobno"  [(ngModel)]="mobno" type="text" class="form-control">
+                    </div>
+                    
+                    <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                        <label for="" class="form-label">Username</label>
+                        <input name="username"  [(ngModel)]="username" type="text" class="form-control">
+                    </div>
+                    <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 mt-2">
+                        <button (click)="UpdateValues(j.id)" class="btn btn-primary">Edit</button>
+                    </div>
+
+                </div>
+        </div>
+    </div>
+    
+</div>

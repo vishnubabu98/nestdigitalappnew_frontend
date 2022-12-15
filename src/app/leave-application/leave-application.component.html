@@ -1,0 +1,34 @@
+<app-emp-navbar></app-emp-navbar>
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="row g-3">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <label for="" class="form label">Leave Type</label>
+                    <select name="leavetype"[(ngModel)]="leavetype" id="" class="form-control">
+                        <option value="special leave">Special leave</option>
+                        <option value="casual leave">Casual leave</option>
+                        <option value="sick leave">Sick leave</option>
+                    </select>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <label for="" class="form label">Start Date</label>
+                    <input name="startdate"[(ngModel)]="startdate" type="date" name="" id="" class="form-control">
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <label for="" class="form label">End Date</label>
+                    <input name="enddate"[(ngModel)]="enddate" type="date" name="" id="" class="form-control">
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <label for="" class="form label">Reason</label>
+                    <input name="reason"[(ngModel)]="reason" type="text" class="form-control">
+                </div>
+               
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 mt-2">
+                    <button (click)="readValues()" class="btn btn-success">submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
