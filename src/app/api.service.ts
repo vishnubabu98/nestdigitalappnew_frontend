@@ -47,6 +47,19 @@ export class ApiService {
   leaveStatus=(dataToSend:any)=>{
     return this.http.post("http://localhost:8080/empleavestatus",dataToSend)
   }
+  leaveAdminView=(dataToSend:any)=>{
+    return this.http.post("http://localhost:8080/adminleaveUpdate",dataToSend)
+  }
+  approveLeave=(dataToSend:any)=>{
+    return this.http.post("http://localhost:8080/leaveupdateStatus",dataToSend)
+  }
+  empLog=()=>{
+    return this.http.get("http://localhost:8080/employeelog")
+  }
+  visitorLog=()=>{
+    return this.http.get("http://localhost:8080/visitorlog")
+  }
+
 
 
 
