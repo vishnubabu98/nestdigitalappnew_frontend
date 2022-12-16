@@ -22,6 +22,9 @@ import { ViewuserprofileComponent } from './viewuserprofile/viewuserprofile.comp
 import { LeaveApplicationComponent } from './leave-application/leave-application.component';
 import { EmpNavbarComponent } from './emp-navbar/emp-navbar.component';
 import { LeaveStatusComponent } from './leave-status/leave-status.component';
+import { LeaveRequestComponent } from './leave-request/leave-request.component';
+import { EmpLogEntryComponent } from './emp-log-entry/emp-log-entry.component';
+import { SecurityLogComponent } from './security-log/security-log.component';
 
 const myRoute:Routes=[
   {
@@ -79,6 +82,18 @@ const myRoute:Routes=[
   {
     path:"leavestatus",
     component:LeaveStatusComponent
+  },
+  {
+    path:"adminleaveupdate",
+    component:LeaveRequestComponent
+  },
+  {
+    path:"emplog",
+    component:EmpLogEntryComponent
+  },
+  {
+    path:"visitorlog",
+    component:SecurityLogComponent
   }
   
   
@@ -103,7 +118,10 @@ const myRoute:Routes=[
     ViewuserprofileComponent,
     LeaveApplicationComponent,
     EmpNavbarComponent,
-    LeaveStatusComponent
+    LeaveStatusComponent,
+    LeaveRequestComponent,
+    EmpLogEntryComponent,
+    SecurityLogComponent
   ],
   imports: [
     BrowserModule,
